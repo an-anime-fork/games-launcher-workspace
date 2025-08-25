@@ -1,0 +1,7 @@
+#! /bin/bash
+
+[ "$(id -u)" == "0" ] || { echo "Please run this script as root."; exit 1; }
+
+apt install -y \
+  protobuf-codegen protobuf-c-compiler protobuf-compiler \
+  librust-openssl-sys-dev librust-js-sys-dev librust-protoc-dev

@@ -1,0 +1,7 @@
+#! /bin/bash
+
+for REPO in "pretty-waves" "anime-game-core" "anime-launcher-sdk" "."; do
+  pushd "${REPO}" || exit 1
+  git pull
+  popd || exit 2
+done

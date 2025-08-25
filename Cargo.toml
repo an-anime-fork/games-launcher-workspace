@@ -1,0 +1,15 @@
+#[package]
+#name = "agsl-workspace"
+#version = "0.0.1"
+#authors = ["Renaud Lepage <cybik@cybik.moe>"]
+#license = "GPL-3.0"
+#readme = "README.md"
+#repository = "https://github.com/an-anime-fork/wuwa-workspace"
+#edition = "2024"
+
+[workspace]
+members = [ "anime-game-core", "anime-games-launcher" ]
+resolver = "2"
+
+[workspace.dependencies]
+anime-game-core = { path = "anime-game-core", features = [ "all" ], branch = "v2.0.0-rewrite" }
